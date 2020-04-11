@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule } from '@angular/material';
+import {
+  FlexLayoutModule, StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMedia, BreakPointRegistry, PrintHook,
+  LayoutStyleBuilder, FlexStyleBuilder, ShowHideStyleBuilder, FlexOrderStyleBuilder, LayoutAlignStyleBuilder,
+  LayoutGapStyleBuilder
+} from '@angular/flex-layout';
 
 
 
@@ -13,12 +19,20 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SidebarComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatMenuModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-  ]
+  ],
+  providers: [StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMedia, BreakPointRegistry, PrintHook,
+    LayoutStyleBuilder, FlexStyleBuilder, ShowHideStyleBuilder, FlexOrderStyleBuilder, LayoutAlignStyleBuilder, LayoutGapStyleBuilder]
 })
 export class SharedModule { }
