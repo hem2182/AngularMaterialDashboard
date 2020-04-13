@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+div > div {
+    margin: 0;
+}
+
+div {
+    margin: 20px 0 20px 0;
+}
+
+.stats-cards {
+    .mat-card {
+      overflow: hidden;
+    }
+  }
+
+  table {
+    width: 100%;
+  }

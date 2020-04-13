@@ -10,7 +10,10 @@ import {
   LayoutGapStyleBuilder
 } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
-
+import { AreaComponent } from './widgets/area/area.component';
+import { CardComponent } from './widgets/card/card.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { PieComponent } from './widgets/pie/pie.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
@@ -28,12 +34,16 @@ import { RouterModule } from '@angular/router';
     FlexLayoutModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    HighchartsChartModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   providers: [StyleUtils, StylesheetMap, MediaMarshaller, ɵMatchMedia, BreakPointRegistry, PrintHook,
     LayoutStyleBuilder, FlexStyleBuilder, ShowHideStyleBuilder, FlexOrderStyleBuilder, LayoutAlignStyleBuilder, LayoutGapStyleBuilder]
